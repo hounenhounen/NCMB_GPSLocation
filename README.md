@@ -20,7 +20,8 @@ var onFindSuccess = function(location){
 www内app.jsの上記のconsole.logの下に
 下記のコードを実装してください
 
-```js:insert1.js
+```js
+//insert1.js
 var PlacePointsClass = ncmb.DataStore("PlacePoints");
 //ニフティクラウド mobile backendにアクセスして検索開始位置を指定
 PlacePointsClass.withinKilometers("geo", geoPoint, 5)
@@ -70,7 +71,8 @@ var onSaveSuccess = function(location){
 www内app.jsの上記のfunction onPrompt(results)内のconsole.logの下に
 下記のコードを実装してください
 
-```js:insert2.js
+```js
+//insert2.js
 var Places = ncmb.DataStore("PlacePoints");
             var point = new Places();
             point.set("name",results.input1);
