@@ -10,6 +10,8 @@ https://openstreetmap.jp/
 
 # ポイント表示のコード実装
 
+www内app.jsにonFindSuccessの一部にコードを加えることでmobile backendに登録された現在地付近のポイントを引き出し、mapに表示することができます
+
 ```js
 var onFindSuccess = function(location){
 		current.geopoint = location.coords; 
@@ -17,7 +19,7 @@ var onFindSuccess = function(location){
         console.log("findpoints:"+location.coords.latitude + ":" + location.coords.longitude);
 }
 ```
-www内app.jsの上記のconsole.logの下に
+上記のconsole.logの下に
 下記のコードを実装してください
 
 ```js
@@ -47,6 +49,8 @@ PlacePointsClass.withinKilometers("geo", geoPoint, 5)
 
 #現在地のポイント登録
 
+www内app.jsにonSaveSuccessの一部にコードを加えることで現在地をポイントとして位置情報つきで、mobile backendに登録できます
+
 ```js
 //ポイントの登録時に位置情報取得に成功した場合のコールバック
 var onSaveSuccess = function(location){
@@ -68,7 +72,7 @@ var onSaveSuccess = function(location){
     };
 ```
 
-www内app.jsの上記のfunction onPrompt(results)内のconsole.logの下に
+上記のfunction onPrompt(results)内のconsole.logの下に
 下記のコードを実装してください
 
 ```js
