@@ -1,6 +1,6 @@
 //各種設定値記載
 var current;
-var YOUR_APP_KEY = "Ap_KEY";
+var YOUR_APP_KEY = "APP_KEY";
 var YOUR_CLIENT_KEY = "CLIENT_KEY";
 var ncmb;
 var map;
