@@ -72,7 +72,7 @@ var onFindSuccess = function(location){
         
         var PlacePointsClass = ncmb.DataStore("PlacePoints");
         //ニフティクラウド mobile backendにアクセスして検索開始位置を指定
-        PlacePointsClass.withinKilometers("geo", geoPoint, 5)
+        PlacePointsClass.withinKilometers("geo", geoPoint, 30)
                         .fetchAll()
                         .then(function(results){
                             var data = [];
